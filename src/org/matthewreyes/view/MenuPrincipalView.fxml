@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="444.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.matthewreyes.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagen/Captura1.PNG" />
+         </image>
+      </ImageView>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Modulos">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#VentanaEmpresas" text="Empresas" />
+                  <MenuItem mnemonicParsing="false" onAction="#VentanaTipoEmpleados" text="Tipo Empleado" />
+                  <MenuItem mnemonicParsing="false" onAction="#VentanaTipoPlatos" text="Tipo Plato" />
+                  <MenuItem mnemonicParsing="false" onAction="#VentanaProductos" text="Productos" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Entidades de unión">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#VentanaProductosHasPlatos" text="Productos has platos" />
+              <MenuItem mnemonicParsing="false" onAction="#VentanaServiciosPlatos" text="Servicios has platos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaServicioHasEmpleado" text="Servicios has empleados" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="?">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#VentanaProgramador" text="Desarrollador" />
+            </items>
+          </Menu>
+        </menus>
+         <effect>
+            <InnerShadow choke="0.57" color="#429a2e" height="14.78" radius="12.525" width="37.32" />
+         </effect>
+      </MenuBar>
+   </children>
+</AnchorPane>

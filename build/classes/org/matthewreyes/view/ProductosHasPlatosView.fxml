@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="631.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.matthewreyes.controller.productoPlatoController">
+   <children>
+      <ImageView fitHeight="605.0" fitWidth="662.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagen/fondo.PNG" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cmbCodigoProductos" layoutX="237.0" layoutY="146.0" prefHeight="31.0" prefWidth="364.0" />
+      <TextField fx:id="txtCodigo" editable="false" layoutX="237.0" layoutY="101.0" prefHeight="31.0" prefWidth="364.0" />
+      <Label layoutX="51.0" layoutY="194.0" text="Código de platos:" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="148.0" text="Codigo de productos:" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="103.0" text="Código:" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoPlatos" layoutX="237.0" layoutY="192.0" prefHeight="31.0" prefWidth="364.0" />
+      <Label layoutX="220.0" layoutY="29.0" text="Productos_has_Platos" textFill="SNOW">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblProductoPlatos" blendMode="COLOR_BURN" layoutX="81.0" layoutY="242.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="410.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="75.0" text="Código" />
+          <TableColumn fx:id="colCodigoProductos" prefWidth="164.0" text="Código de productos" />
+            <TableColumn fx:id="colCodPlatos" minWidth="0.0" prefWidth="169.0" text="Código de platos" />
+        </columns>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </TableView>
+      <ImageView fitHeight="53.0" fitWidth="52.0" layoutX="549.0" layoutY="393.0" onMouseClicked="#MenuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <InnerShadow color="#5fee27" />
+         </effect>
+         <image>
+            <Image url="@../imagen/regresar.PNG" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

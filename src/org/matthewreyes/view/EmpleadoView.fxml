@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="719.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.matthewreyes.controller.EmpleadoController">
+   <children>
+      <ImageView fitHeight="951.0" fitWidth="1006.0" layoutX="-1.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagen/fondo.PNG" />
+         </image>
+      </ImageView>
+      <Label layoutX="448.0" layoutY="14.0" text="Empleados" textFill="SNOW">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="33.0" layoutY="71.0" text="Codigo Empleado:" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="33.0" layoutY="112.0" text="Número de Empleado:" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="33.0" layoutY="154.0" text="Apellido Empleado:" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="33.0" layoutY="199.0" text="Nombre Empleado:" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <TableView fx:id="tblEmpleados" blendMode="COLOR_BURN" layoutX="24.0" layoutY="253.0" onKeyReleased="#seleccionarDatos" onMouseClicked="#seleccionarDatos" prefHeight="356.0" prefWidth="953.0">
+        <columns>
+          <TableColumn fx:id="colCodigoEmpleado" prefWidth="65.0" text="Codigo" />
+            <TableColumn fx:id="colNoEmpleado" prefWidth="115.0" text="No. Empleado" />
+            <TableColumn fx:id="colApellidos" prefWidth="133.0" text="Apellidos" />
+            <TableColumn fx:id="colNombres" prefWidth="132.0" text="Nombres" />
+            <TableColumn fx:id="colDireccion" prefWidth="137.00006103515625" text="Dirección" />
+            <TableColumn fx:id="colTelefono" prefWidth="89.0" text="Teléfono" />
+            <TableColumn fx:id="colGradoCocinero" prefWidth="132.0" text="GradoCocinero" />
+            <TableColumn fx:id="colCodTipoEmpleado" prefWidth="149.0" text="CodTipoEmpleado" />
+        </columns>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="65.0" layoutY="646.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="46.0" prefWidth="92.0" text="Nuevo">
+         <effect>
+            <InnerShadow color="#ff601c" height="76.98" radius="23.995" />
+         </effect></Button>
+      <Button fx:id="btnEliminar" layoutX="175.0" layoutY="646.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="46.0" prefWidth="92.0" text="Eliminar">
+         <effect>
+            <InnerShadow color="#ff601c" height="76.98" radius="23.995" />
+         </effect></Button>
+      <Button fx:id="btnEditar" layoutX="288.0" layoutY="646.0" mnemonicParsing="false" onAction="#Editar" prefHeight="46.0" prefWidth="92.0" text="Editar">
+         <effect>
+            <InnerShadow color="#4dc62c" height="76.98" radius="23.995" />
+         </effect></Button>
+      <Button fx:id="btnReporte" layoutX="402.0" layoutY="646.0" mnemonicParsing="false" onAction="#reporte" prefHeight="46.0" prefWidth="92.0" text="Reporte">
+         <effect>
+            <InnerShadow color="#4dc62c" height="76.98" radius="23.995" />
+         </effect></Button>
+      <ImageView fitHeight="53.0" fitWidth="52.0" layoutX="914.0" layoutY="646.0" onMouseClicked="#VentanaTipoEmpleados" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagen/regresar.PNG" />
+         </image>
+         <effect>
+            <InnerShadow color="#5fee27" />
+         </effect>
+      </ImageView>
+      <Label layoutX="479.0" layoutY="162.0" text="Grado De Cocinero:" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="479.0" layoutY="74.0" text="Dirección Empleado:" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="477.0" layoutY="119.0" text="Teléfono Contacto:" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="479.0" layoutY="203.0" text="Codigo Tipo De Empleado:" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoEmpleado" editable="false" layoutX="214.0" layoutY="71.0" prefHeight="31.0" prefWidth="143.0" />
+      <TextField fx:id="txtNumeroEmpleado" editable="false" layoutX="214.0" layoutY="112.0" prefHeight="31.0" prefWidth="143.0" />
+      <TextField fx:id="txtApellidoEmpleado" editable="false" layoutX="214.0" layoutY="154.0" prefHeight="31.0" prefWidth="249.0" />
+      <TextField fx:id="txtNombreEmpleado" editable="false" layoutX="214.0" layoutY="199.0" prefHeight="31.0" prefWidth="249.0" />
+      <TextField fx:id="txtDireccionEmpleado" editable="false" layoutX="693.0" layoutY="74.0" prefHeight="31.0" prefWidth="280.0" />
+      <TextField fx:id="txtTelefonoContacto" editable="false" layoutX="693.0" layoutY="119.0" prefHeight="31.0" prefWidth="280.0" />
+      <TextField fx:id="txtGradoCocinero" editable="false" layoutX="693.0" layoutY="162.0" prefHeight="31.0" prefWidth="280.0" />
+      <ComboBox fx:id="cmbCodigoTipoEmpleado" layoutX="693.0" layoutY="203.0" prefHeight="31.0" prefWidth="280.0">
+         <effect>
+            <DropShadow color="#d717bd" height="33.44" radius="14.665" width="27.22" />
+         </effect>
+      </ComboBox>
+   </children>
+</AnchorPane>

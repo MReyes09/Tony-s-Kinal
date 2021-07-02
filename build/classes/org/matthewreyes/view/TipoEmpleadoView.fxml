@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="624.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.matthewreyes.controller.TipoEmpleadoController">
+   <children>
+      <ImageView fitHeight="598.0" fitWidth="646.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagen/fondo.PNG" />
+         </image>
+      </ImageView>
+      <Label layoutX="237.0" layoutY="44.0" text="Tipo Empleado" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="36.0" layoutY="117.0" text="Código TipoEmpleado" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="163.0" text="Descripción" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoTipoEmpleado" editable="false" layoutX="240.0" layoutY="115.0" prefHeight="31.0" prefWidth="343.0" />
+      <TextField fx:id="txtDescripcion" editable="false" layoutX="240.0" layoutY="160.0" prefHeight="31.0" prefWidth="343.0" />
+      <TableView fx:id="tblTipoEmpleados" blendMode="COLOR_BURN" layoutX="26.0" layoutY="232.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="198.0" prefWidth="553.0">
+        <columns>
+          <TableColumn fx:id="colCodigoTipoEmpleado" prefWidth="165.0" text="Código TipoEmpleado" />
+          <TableColumn fx:id="colDescripcion" prefWidth="410.0" text="Descripción" />
+        </columns>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="360.0" layoutY="466.0" mnemonicParsing="false" onAction="#ButtonNuevo" text="Nuevo">
+         <effect>
+            <InnerShadow color="#ff601c" height="77.74" radius="24.185">
+               <input>
+                  <ColorAdjust />
+               </input></InnerShadow>
+         </effect>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="440.0" layoutY="466.0" mnemonicParsing="false" onAction="#buttonEliminar" text="Eliminar">
+         <effect>
+            <InnerShadow color="#ff601c" height="86.4" radius="26.5425" width="21.77">
+               <input>
+                  <ColorAdjust />
+               </input></InnerShadow>
+         </effect>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="360.0" layoutY="513.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#buttonActualizar" text="Editar">
+         <effect>
+            <InnerShadow blurType="GAUSSIAN" color="#4dc62c" height="78.92" radius="24.6725" width="21.77">
+               <input>
+                  <ColorAdjust />
+               </input></InnerShadow>
+         </effect>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="440.0" layoutY="513.0" mnemonicParsing="false" onAction="#buttonReporte" text="Reporte">
+         <effect>
+            <InnerShadow color="#4dc62c" height="79.69" radius="24.669999999999998" width="20.99">
+               <input>
+                  <ColorAdjust />
+               </input></InnerShadow>
+         </effect>
+      </Button>
+      <ImageView fitHeight="40.0" fitWidth="50.0" layoutX="560.0" layoutY="528.0" onMouseClicked="#MenuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <InnerShadow color="#5fee27" />
+         </effect>
+         <image>
+            <Image url="@../imagen/regresar.PNG" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="88.0" fitWidth="64.0" layoutX="26.0" layoutY="466.0" onMouseClicked="#VentanaEmpleados" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagen/Captura.PNG" />
+         </image>
+         <effect>
+            <InnerShadow choke="0.65" color="#94c958" />
+         </effect>
+      </ImageView>
+      <Label layoutX="110.0" layoutY="497.0" text="Registra Los Empleados" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

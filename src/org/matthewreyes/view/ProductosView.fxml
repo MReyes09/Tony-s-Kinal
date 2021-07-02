@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.matthewreyes.controller.ProductosController">
+   <children>
+      <ImageView fitHeight="586.0" fitWidth="603.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagen/fondo.PNG" />
+         </image>
+      </ImageView>
+      <Label layoutX="255.0" layoutY="31.0" text="Productos" textFill="SNOW">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="80.0" text="Código:" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="123.0" text="Nombre:" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="167.0" text="Cantidad:" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblProductos" blendMode="COLOR_BURN" layoutX="65.0" layoutY="241.0" onKeyReleased="#seleccionarDatos" onMouseClicked="#seleccionarDatos" prefHeight="200.0" prefWidth="473.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="75.0" text="Código:" />
+          <TableColumn fx:id="colNombre" prefWidth="191.0" text="Nombre" />
+            <TableColumn fx:id="colCantidad" minWidth="0.0" prefWidth="206.0" text="Cantidad" />
+        </columns>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </TableView>
+      <ImageView fitHeight="119.0" fitWidth="198.0" layoutX="351.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagen/Productos.PNG" />
+         </image>
+         <effect>
+            <InnerShadow choke="0.58" color="#74e83e" height="42.77" radius="17.19" width="27.99">
+               <input>
+                  <Glow level="0.14" />
+               </input>
+            </InnerShadow>
+         </effect>
+      </ImageView>
+      <Button fx:id="btnNuevo" layoutX="36.0" layoutY="482.0" mnemonicParsing="false" onAction="#AccionNuevo" prefHeight="46.0" prefWidth="92.0" text="Nuevo">
+         <effect>
+            <InnerShadow color="#ff601c" height="76.98" radius="23.995" />
+         </effect>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="370.0" layoutY="482.0" mnemonicParsing="false" onAction="#accionReporte" prefHeight="46.0" prefWidth="92.0" text="Reporte">
+         <effect>
+            <InnerShadow color="#4dc62c" height="76.98" radius="23.995" />
+         </effect>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="256.0" layoutY="482.0" mnemonicParsing="false" onAction="#accionEditar" prefHeight="46.0" prefWidth="92.0" text="Editar">
+         <effect>
+            <InnerShadow color="#4dc62c" height="76.98" radius="23.995" />
+         </effect>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="143.0" layoutY="482.0" mnemonicParsing="false" onAction="#accionEliminar" prefHeight="46.0" prefWidth="92.0" text="Eliminar">
+         <effect>
+            <InnerShadow color="#ff601c" height="76.98" radius="23.995" />
+         </effect>
+      </Button>
+      <ImageView fitHeight="53.0" fitWidth="52.0" layoutX="512.0" layoutY="482.0" onMouseClicked="#MenuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <InnerShadow color="#5fee27" />
+         </effect>
+         <image>
+            <Image url="@../imagen/regresar.PNG" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtCodigoProductos" editable="false" layoutX="128.0" layoutY="77.0" prefHeight="31.0" prefWidth="201.0" />
+      <TextField fx:id="txtNombreProductos" editable="false" layoutX="128.0" layoutY="120.0" prefHeight="31.0" prefWidth="201.0" />
+      <TextField fx:id="txtCantidadProductos" editable="false" layoutX="128.0" layoutY="164.0" prefHeight="31.0" prefWidth="201.0" />
+   </children>
+</AnchorPane>

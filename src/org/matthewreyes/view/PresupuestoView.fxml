@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="591.0" prefWidth="623.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.matthewreyes.controller.PresupuestoController">
+   <children>
+      <ImageView fitHeight="598.0" fitWidth="626.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagen/fondo.PNG" />
+         </image>
+      </ImageView>
+      <Label layoutX="268.0" layoutY="14.0" text="Presupuesto" textFill="SNOW">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="26.0" layoutY="69.0" text="Codigo Presupuesto:" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="26.0" layoutY="110.0" text="Fecha Solicitud:" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="26.0" layoutY="152.0" text="Cantidad Presupuesto:" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="26.0" layoutY="197.0" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <TextField fx:id="txtCodigoPresupuesto" editable="false" layoutX="207.0" layoutY="67.0" prefHeight="31.0" prefWidth="379.0" />
+      <TextField fx:id="txtCantidadPresupuesto" editable="false" layoutX="207.0" layoutY="150.0" prefHeight="31.0" prefWidth="379.0" />
+      <TableView fx:id="tblPresupuestos" blendMode="COLOR_BURN" layoutX="26.0" layoutY="272.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="239.0" prefWidth="564.0">
+        <columns>
+          <TableColumn fx:id="colCodigoPresupuesto" prefWidth="147.0" text="CodigoPresupuesto" />
+            <TableColumn fx:id="colFechaSolicitud" prefWidth="118.0" text="Fecha Solicitud" />
+            <TableColumn fx:id="colCantidadPresupuesto" prefWidth="145.0" text="Presupuesto" />
+            <TableColumn fx:id="colCodigoEmpresa" prefWidth="153.0" text="CódigoEmpresa" />
+        </columns>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="26.0" layoutY="532.0" mnemonicParsing="false" onAction="#nuevo" text="Nuevo">
+         <effect>
+            <InnerShadow color="#bbff00" />
+         </effect></Button>
+      <Button fx:id="btnEliminar" layoutX="96.0" layoutY="532.0" mnemonicParsing="false" onAction="#Eliminar" text="Eliminar">
+         <effect>
+            <InnerShadow color="#baf509" />
+         </effect></Button>
+      <Button fx:id="btnEditar" layoutX="176.0" layoutY="532.0" mnemonicParsing="false" onAction="#Editar" text="Editar">
+         <effect>
+            <InnerShadow color="#a9ee48" />
+         </effect></Button>
+      <Button fx:id="btnReporte" layoutX="268.0" layoutY="532.0" mnemonicParsing="false" onAction="#Reporte" text="Reporte">
+         <effect>
+            <InnerShadow color="#c7ff7a" />
+         </effect></Button>
+      <ImageView fitHeight="40.0" fitWidth="50.0" layoutX="544.0" layoutY="528.0" onMouseClicked="#VentanaEmpresas" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagen/regresar.PNG" />
+         </image>
+         <effect>
+            <InnerShadow color="#5fee27" />
+         </effect>
+      </ImageView>
+      <Label layoutX="27.0" layoutY="198.0" text="Código Empresa:" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoEmpresa" layoutX="207.0" layoutY="195.0" prefHeight="31.0" prefWidth="379.0" />
+      <GridPane fx:id="grpFechaSolicitud" disable="true" layoutX="208.0" layoutY="107.0" prefHeight="30.0" prefWidth="379.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>

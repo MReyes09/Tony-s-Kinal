@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportePresupuesto" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7603f6b7-2e7e-4525-974c-a0c252a58ebf">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codigoEmpresa" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_ListarReporte ($P{codigoEmpresa})]]>
+	</queryString>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoPresupuesto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaSolicitud" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidadPresupuesto" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoServicio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaServicio" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipoServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaServicio" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lugarServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="752" height="79" uuid="a1352949-cf5c-48f4-82b2-48405356be44"/>
+				<imageExpression><![CDATA["C:\\Users\\matthew\\Documents\\NetBeansProjects\\TonysKinal2016152\\src\\org\\matthewreyes\\imagen\\imagen0.jpg"]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="11" y="11" width="79" height="64" uuid="3a95db63-65bc-4000-a67e-2d84b95b5cab"/>
+				<imageExpression><![CDATA["C:\\Users\\matthew\\Documents\\NetBeansProjects\\TonysKinal2016152\\src\\org\\matthewreyes\\imagen\\Captura1.PNG"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="102" y="31" width="107" height="22" forecolor="#FFFFFF" uuid="23558ff9-514c-42e3-a029-86de4520a187"/>
+				<textElement>
+					<font fontName="Baskerville Old Face" size="18" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Tony´s Kinal]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="162" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="0" width="752" height="69" forecolor="#000000" uuid="2bf0fd8e-ae59-4611-9ad5-4e8fd6536f5f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE PRESUPUESTOS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="214" y="47" width="328" height="2" forecolor="#FF0033" uuid="eff90526-e7c9-408c-87cd-fda4832ea9fa"/>
+			</line>
+			<line>
+				<reportElement x="214" y="52" width="328" height="2" forecolor="#FF0033" uuid="0ec37d40-f9d7-47f8-b7f0-6bd448f84388"/>
+			</line>
+			<textField>
+				<reportElement x="214" y="80" width="121" height="20" uuid="03109df9-ad4d-4a5b-8325-ff21f570991b"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="18" y="80" width="191" height="20" forecolor="#000000" uuid="ef116863-6868-457e-897d-31e54f4350e0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE DE LA EMPRESA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="18" y="113" width="191" height="20" forecolor="#000000" uuid="07ae1732-b44e-4c11-8d9c-a86b228ed250"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DIRECCIÓN: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="214" y="113" width="121" height="20" uuid="c765b157-a029-4c5c-af9b-94f92d2e67f3"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="69" width="751" height="1" uuid="7fb5f919-8ec8-49b8-add9-a1e862a22c7a"/>
+				<graphicElement>
+					<pen lineStyle="Dashed" lineColor="#66FF33"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="574" y="80" width="100" height="20" uuid="ec81ab0e-977e-47a9-959c-077205c586a3"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="366" y="80" width="191" height="20" forecolor="#000000" uuid="3e95ac69-1283-4807-92e1-2cb8da3ba139"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TELÉFONO CONTACTO:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="1" height="69" uuid="c03c48ca-6f21-412a-b590-e040c544f1d4"/>
+			</line>
+			<line>
+				<reportElement x="752" y="0" width="1" height="69" uuid="06178e48-6390-44a9-a8d2-689dd530192e"/>
+			</line>
+			<line>
+				<reportElement x="752" y="70" width="1" height="91" uuid="96e91ed2-241a-4495-a39c-5adc1ce6b0bb"/>
+			</line>
+			<line>
+				<reportElement x="0" y="69" width="1" height="93" uuid="0c705362-71dc-48f9-af21-7775b0d40336"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement x="19" y="8" width="119" height="20" forecolor="#000000" uuid="cc80889f-a3f1-48c4-ab09-9576df6f2432"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FechaSolicitud]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="173" y="8" width="137" height="19" uuid="179570d9-802d-4a52-814a-527068b6a941"/>
+				<textElement>
+					<font fontName="Baskerville Old Face" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CantidadPresupuesto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="366" y="7" width="100" height="20" uuid="4690f83e-293e-4c1e-bf82-ec20d70ee2d3"/>
+				<textElement>
+					<font fontName="Baskerville Old Face" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TipoServicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="504" y="7" width="100" height="20" uuid="1f55cc4c-23de-4b8d-8b45-69ec85995942"/>
+				<textElement>
+					<font fontName="Baskerville Old Face" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HoraServicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="631" y="7" width="100" height="20" uuid="4df34c80-4b71-413b-ac30-ebe316fbc617"/>
+				<textElement>
+					<font fontName="Baskerville Old Face" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LugarServicio]]></text>
+			</staticText>
+			<line>
+				<reportElement x="2" y="0" width="751" height="1" uuid="1ebe3e52-6ff2-4e82-b96f-ccbf0ee3c4cb"/>
+				<graphicElement>
+					<pen lineStyle="Dashed" lineColor="#66FF33"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="334" y="-5" width="1" height="40" uuid="137ab0c6-36f0-4c83-892d-a18bee8132fb"/>
+				<graphicElement>
+					<pen lineColor="#009966"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="482" y="0" width="1" height="36" uuid="e2f40aa0-f0e6-4a1e-a690-2295f077c43e"/>
+				<graphicElement>
+					<pen lineColor="#009966"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="153" y="-1" width="1" height="36" uuid="3cf2d688-5cc7-4459-8a5c-4118fabc8626"/>
+				<graphicElement>
+					<pen lineColor="#009966"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="617" y="-1" width="1" height="35" uuid="7d26e0d4-64a6-4277-8428-6db509ffd29e"/>
+			</line>
+			<line>
+				<reportElement x="752" y="1" width="1" height="36" uuid="b58a3dfe-6575-4309-a75f-7c442ad03c15"/>
+			</line>
+			<line>
+				<reportElement x="0" y="1" width="1" height="36" uuid="ca1517ed-3ac1-40da-bad6-f200902f609c"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="44" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="19" y="13" width="119" height="20" uuid="2225a17d-7de4-4b03-ae2c-20cb5040d304"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaSolicitud}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="173" y="13" width="149" height="20" uuid="8b8fdb32-20b5-4781-b4f5-6246980f1a52"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantidadPresupuesto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="366" y="13" width="100" height="20" uuid="634dfcbe-e6e1-481a-9757-834b0d6304d5"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipoServicio}]]></textFieldExpression>
+			</textField>
+			<textField pattern="h.mm a">
+				<reportElement x="504" y="13" width="100" height="20" uuid="1d9f32c2-73dc-4d72-acc8-17a07a9c8e07"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{horaServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="631" y="13" width="100" height="20" uuid="ccd03c29-3065-464d-9445-2016df06d755"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lugarServicio}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="0" width="751" height="1" uuid="392406c8-211d-42fc-965a-1a72d5bc38c3"/>
+				<graphicElement>
+					<pen lineStyle="Dashed" lineColor="#66FF33"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="153" y="2" width="1" height="42" uuid="3737ea8c-77d7-4b5a-ac48-5760e29c9632"/>
+				<graphicElement>
+					<pen lineColor="#009966"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="617" y="1" width="1" height="43" uuid="054cc518-2078-4c6b-b472-bbd8ef4a7248"/>
+			</line>
+			<line>
+				<reportElement x="482" y="0" width="1" height="44" uuid="409e5037-b333-4df7-811e-f89dee0b54bd"/>
+				<graphicElement>
+					<pen lineColor="#009966"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="0" width="1" height="44" uuid="fd93f625-0e9e-4e59-87ef-66b1275c21ff"/>
+			</line>
+			<line>
+				<reportElement x="752" y="3" width="1" height="41" uuid="8eb1bf2b-7087-4f3e-9923-7b9ad0b5817e"/>
+			</line>
+			<line>
+				<reportElement x="334" y="0" width="1" height="44" uuid="39e46374-6366-4686-a149-fa74867be850"/>
+				<graphicElement>
+					<pen lineColor="#009966"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="2" y="43" width="751" height="1" uuid="843e0ac3-6b91-4d9e-8e9b-f7119f0fd035"/>
+				<graphicElement>
+					<pen lineStyle="Dashed" lineColor="#66FF33"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="53" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="0" width="750" height="53" uuid="39856ffd-2567-4aa4-bce7-a7f77703ed0a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="14"/>
+				</textElement>
+				<text><![CDATA[No puedes comprar la felicidad, pero si puedes comprar Tonýs que es casí lo mismo]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

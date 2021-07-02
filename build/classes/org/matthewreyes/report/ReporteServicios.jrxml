@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteServicios" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5c67be10-6402-4c86-b47b-ed5de3034471">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codigoServicio" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_ListarReporte2($P{codigoServicio})]]>
+	</queryString>
+	<field name="codigoServicio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaServicio" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipoServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaServicio" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lugarServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoPlato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombrePlato" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcionPlato" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="precioPlato" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoTipoPlato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcionTipo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoProducto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreProducto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="codigoServicio_1" class="java.lang.Integer" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{codigoServicio}]]></variableExpression>
+	</variable>
+	<background>
+		<band height="572" splitType="Stretch">
+			<line>
+				<reportElement x="753" y="0" width="1" height="572" uuid="6cabfd92-6e77-436a-8d70-1f3b467c07e6"/>
+			</line>
+			<line>
+				<reportElement x="1" y="0" width="1" height="572" uuid="c207e349-4752-4dde-9f33-0571eeffa70e"/>
+			</line>
+			<line>
+				<reportElement x="2" y="0" width="748" height="1" uuid="ab3af3a7-6977-45b8-90f0-3c1b11413223"/>
+			</line>
+			<line>
+				<reportElement x="1" y="571" width="751" height="1" uuid="f5b8a34e-5fd1-4cbb-9131-0028d9ad4232"/>
+			</line>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="1" y="0" width="752" height="79" uuid="b45a84b5-e351-4a95-bd6f-c0b89b7fa101"/>
+				<imageExpression><![CDATA["C:\\Users\\matthew\\Documents\\NetBeansProjects\\TonysKinal2016152\\src\\org\\matthewreyes\\imagen\\imagen0.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="103" y="31" width="107" height="22" forecolor="#FFFFFF" uuid="f539088f-ec80-4911-a023-d5bb3bd01396"/>
+				<textElement>
+					<font fontName="Baskerville Old Face" size="18" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Tony´s Kinal]]></text>
+			</staticText>
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="12" y="11" width="79" height="64" uuid="29141655-be88-4ffa-b49e-f4c39c7767ca"/>
+				<imageExpression><![CDATA["C:\\Users\\matthew\\Documents\\NetBeansProjects\\TonysKinal2016152\\src\\org\\matthewreyes\\imagen\\Captura1.PNG"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="752" height="79" forecolor="#000000" uuid="079c1e6f-f633-4e56-aee0-5c8958fdf4c0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE SERVICIOS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="211" y="57" width="328" height="2" forecolor="#FF0033" uuid="fec6ca38-6ed6-4d6d-b417-c62c30ce006d"/>
+			</line>
+			<line>
+				<reportElement x="211" y="62" width="328" height="2" forecolor="#FF0033" uuid="076bf23f-f799-43e7-9471-ba29ffe8235b"/>
+			</line>
+			<line>
+				<reportElement x="2" y="78" width="751" height="1" uuid="ba9b5c51-ad84-4c4a-b950-74b7df2f8eb6"/>
+				<graphicElement>
+					<pen lineStyle="Dashed" lineColor="#66FF33"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement x="13" y="19" width="100" height="20" forecolor="#000000" uuid="736cf69c-1898-43be-a6af-d9a06d21d34f"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CodigoServicio]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-1" y="44" width="751" height="1" uuid="98056d49-3959-4f9f-bb72-639c982d1ff2"/>
+				<graphicElement>
+					<pen lineStyle="Dashed" lineColor="#66FF33"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="128" y="2" width="1" height="42" uuid="a32604c1-7b7d-49be-96b0-d29cbe9f1254"/>
+				<graphicElement>
+					<pen lineColor="#009966"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="549" y="-1" width="1" height="46" uuid="007076b4-8671-4bd2-876e-ffef8e06f050"/>
+			</line>
+			<line>
+				<reportElement x="258" y="2" width="1" height="44" uuid="f74e48fb-c865-4ff6-9ad3-5694668f622d"/>
+				<graphicElement>
+					<pen lineColor="#009966"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="143" y="15" width="100" height="20" forecolor="#000000" uuid="fd082cac-d158-4ee0-959e-4cd72faa6569"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad Platos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="259" y="2" width="280" height="40" forecolor="#000000" uuid="a125bba3-aae2-4cf2-a944-a5f9815dedca"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripción ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="583" y="13" width="143" height="20" forecolor="#000000" uuid="dee0b8ef-3ac9-4834-962b-63f26a461f7c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre De Producto]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="46" splitType="Stretch">
+			<textField>
+				<reportElement x="12" y="15" width="91" height="20" uuid="369e746f-772a-479a-846d-b27fdfe53f22"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoServicio}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="45" width="751" height="1" uuid="3ecf52cd-f87e-40d3-901b-97d88372d207"/>
+				<graphicElement>
+					<pen lineStyle="Dashed" lineColor="#66FF33"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="549" y="2" width="1" height="43" uuid="bb46bf9f-89a7-4239-861c-414307526591"/>
+			</line>
+			<line>
+				<reportElement x="258" y="2" width="1" height="44" uuid="f55bb9c2-9e7a-435d-bfe8-de218821d533"/>
+				<graphicElement>
+					<pen lineColor="#009966"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="128" y="0" width="1" height="44" uuid="a1bc5e21-c227-4ad5-a470-cd7a9ce08c5b"/>
+				<graphicElement>
+					<pen lineColor="#009966"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="143" y="15" width="100" height="20" uuid="886d042c-e9ae-40b1-9a47-e76385b09aa5"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="15" width="269" height="20" uuid="67d31ad5-eb41-4123-9035-dcd4dfb724f7"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descripcionTipo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="560" y="15" width="190" height="20" uuid="116d63e7-a6ca-454f-b14c-9a85fcd91485"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreProducto}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="49">
+			<staticText>
+				<reportElement x="0" y="0" width="752" height="49" uuid="de78fe10-cad9-4ba0-88ce-178f1fa5425b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="14"/>
+				</textElement>
+				<text><![CDATA[No puedes comprar la felicidad, pero si puedes comprar Tonýs que es casí lo mismo]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.matthewreyes.controller.PlatosController">
+   <children>
+      <ImageView fitHeight="1002.0" fitWidth="1033.0" layoutX="-5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagen/fondo.PNG" />
+         </image>
+      </ImageView>
+      <Label layoutX="483.0" layoutY="27.0" text="PLATOS" textFill="SNOW">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="93.0" text="Código:" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="138.0" text="Cantidad:" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="184.0" text="Nombre del plato:" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCantidad" editable="false" layoutX="195.0" layoutY="135.0" prefHeight="31.0" prefWidth="281.0" />
+      <TextField fx:id="txtCodigo" editable="false" layoutX="195.0" layoutY="90.0" prefHeight="31.0" prefWidth="281.0" />
+      <TextField fx:id="txtNombrePlato" editable="false" layoutX="195.0" layoutY="181.0" prefHeight="31.0" prefWidth="281.0" />
+      <TextField fx:id="txtDescripcion" editable="false" layoutX="674.0" layoutY="90.0" prefHeight="31.0" prefWidth="302.0" />
+      <TextField fx:id="txtPrecioPlato" editable="false" layoutX="674.0" layoutY="135.0" prefHeight="31.0" prefWidth="302.0" />
+      <Label layoutX="41.0" layoutY="229.0" text="Código TipoPlato:" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="520.0" layoutY="138.0" text="Precio del plato:" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="520.0" layoutY="93.0" text="Descripción:" textFill="WHITE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblPlatos" blendMode="COLOR_BURN" layoutX="41.0" layoutY="275.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="149.0" prefWidth="939.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="64.0" text="Código" />
+            <TableColumn fx:id="colCantidad" prefWidth="82.0" text="Cantidad" />
+            <TableColumn fx:id="colNombre" prefWidth="152.0" text="Nombre" />
+            <TableColumn fx:id="colDescripcion" prefWidth="357.0" text="Descripción" />
+            <TableColumn fx:id="colPrecioPlato" prefWidth="134.0" text="Precio del plato" />
+            <TableColumn fx:id="colCodigoTipoPlato" prefWidth="149.0" text="Código TipoPlato" />
+        </columns>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="45.0" layoutY="468.0" mnemonicParsing="false" onAction="#Nuevo" prefHeight="46.0" prefWidth="92.0" text="Nuevo">
+         <effect>
+            <InnerShadow color="#ff601c" height="76.98" radius="23.995" />
+         </effect>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="379.0" layoutY="468.0" mnemonicParsing="false" onAction="#Reporte" prefHeight="46.0" prefWidth="92.0" text="Reporte">
+         <effect>
+            <InnerShadow color="#4dc62c" height="76.98" radius="23.995" />
+         </effect>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="265.0" layoutY="468.0" mnemonicParsing="false" onAction="#Editar" prefHeight="46.0" prefWidth="92.0" text="Editar">
+         <effect>
+            <InnerShadow color="#4dc62c" height="76.98" radius="23.995" />
+         </effect>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="152.0" layoutY="468.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="46.0" prefWidth="92.0" text="Eliminar">
+         <effect>
+            <InnerShadow color="#ff601c" height="76.98" radius="23.995" />
+         </effect>
+      </Button>
+      <ImageView fitHeight="53.0" fitWidth="52.0" layoutX="928.0" layoutY="477.0" onMouseClicked="#VentanaTipoDeplato" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <InnerShadow color="#5fee27" />
+         </effect>
+         <image>
+            <Image url="@../imagen/regresar.PNG" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cmbCodigoTipoPlato" layoutX="195.0" layoutY="226.0" prefHeight="31.0" prefWidth="474.0" />
+   </children>
+</AnchorPane>

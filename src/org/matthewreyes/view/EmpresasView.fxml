@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="590.0" prefWidth="624.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.matthewreyes.controller.EmpresaController">
+   <children>
+      <ImageView fitHeight="598.0" fitWidth="626.0" layoutX="-1.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagen/fondo.PNG" />
+         </image>
+      </ImageView>
+      <Label layoutX="268.0" layoutY="14.0" text="Empresas" textFill="SNOW">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="26.0" layoutY="69.0" text="Codigo Empresa:" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="26.0" layoutY="110.0" text="Nombre Empresa:" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="26.0" layoutY="152.0" text="Dirección Empresa:" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="26.0" layoutY="197.0" text="Teléfono:" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <TextField fx:id="txtCodigoEmpresa" editable="false" layoutX="176.0" layoutY="67.0" prefHeight="31.0" prefWidth="410.0" />
+      <TextField fx:id="txtNombreEmpresa" editable="false" layoutX="176.0" layoutY="108.0" prefHeight="31.0" prefWidth="410.0" />
+      <TextField fx:id="txtDireccionEmpresa" editable="false" layoutX="176.0" layoutY="150.0" prefHeight="31.0" prefWidth="410.0" />
+      <TextField fx:id="txtTelefonoEmpresa" editable="false" layoutX="176.0" layoutY="192.0" prefHeight="31.0" prefWidth="410.0" />
+      <TableView fx:id="tblEmpresas" layoutX="23.0" layoutY="263.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="176.0" prefWidth="564.0">
+        <columns>
+          <TableColumn fx:id="colCodigoEmpresa" prefWidth="136.0" text="CodigoEmpresa" />
+            <TableColumn fx:id="colNombreEmpresa" prefWidth="134.0" text="NombreEmpresa" />
+            <TableColumn fx:id="colDireccionEmpresa" prefWidth="166.0" text="Dirección " />
+            <TableColumn fx:id="colTelefonoEmpresa" prefWidth="127.0" text="Teléfono" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="23.0" layoutY="463.0" mnemonicParsing="false" onAction="#nuevo" text="Nuevo">
+         <effect>
+            <InnerShadow color="#bbff00" />
+         </effect></Button>
+      <Button fx:id="btnEliminar" layoutX="103.0" layoutY="463.0" mnemonicParsing="false" onAction="#Eliminar" text="Eliminar">
+         <effect>
+            <InnerShadow color="#baf509" />
+         </effect></Button>
+      <Button fx:id="btnEditar" layoutX="196.0" layoutY="463.0" mnemonicParsing="false" onAction="#Editar" text="Editar">
+         <effect>
+            <InnerShadow color="#a9ee48" />
+         </effect></Button>
+      <Button fx:id="btnReporte" layoutX="283.0" layoutY="463.0" mnemonicParsing="false" onAction="#Reporte" text="Reporte">
+         <effect>
+            <InnerShadow color="#c7ff7a" />
+         </effect></Button>
+      <ImageView fitHeight="40.0" fitWidth="50.0" layoutX="544.0" layoutY="528.0" onMouseClicked="#MenuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagen/regresar.PNG" />
+         </image>
+         <effect>
+            <InnerShadow color="#5fee27" />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="57.0" fitWidth="95.0" layoutX="24.0" layoutY="514.0" onMouseClicked="#VentanaPresupuesto" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagen/Presupuesto.PNG" />
+         </image>
+         <effect>
+            <DropShadow color="#89ee24" height="83.2" radius="30.9925" width="42.77" />
+         </effect>
+      </ImageView>
+      <Label layoutX="111.0" layoutY="529.0" text="PRESUPUESTO" textFill="#f2f2f2">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="57.0" fitWidth="95.0" layoutX="246.0" layoutY="514.0" onMouseClicked="#VentanaServicios" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <DropShadow color="#89ee24" height="83.2" radius="30.9925" width="42.77" />
+         </effect>
+         <image>
+            <Image url="@../imagen/Servicios.PNG" />
+         </image>
+      </ImageView>
+      <Label layoutX="356.0" layoutY="529.0" text="Servicios" textFill="#f2f2f2">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

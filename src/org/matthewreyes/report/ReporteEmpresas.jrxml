@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteEmpresas" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5a3fdc4a-73a6-4e4f-8ea2-522d391ccbe7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_ListarEmpresas();]]>
+	</queryString>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="572" height="79" uuid="a36f3ac1-38a6-4db8-82ff-af5932960cd2"/>
+				<imageExpression><![CDATA["C:\\Users\\matthew\\Documents\\NetBeansProjects\\TonysKinal2016152\\src\\org\\matthewreyes\\imagen\\imagen0.jpg"]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="10" y="6" width="79" height="64" uuid="1e91e500-76e9-45fe-9730-46fe8325805c"/>
+				<imageExpression><![CDATA["C:\\Users\\matthew\\Documents\\NetBeansProjects\\TonysKinal2016152\\src\\org\\matthewreyes\\imagen\\Captura1.PNG"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="99" y="24" width="107" height="22" forecolor="#FFFFFF" uuid="14ce531c-23d0-4fb2-a4b5-3b269d54f338"/>
+				<textElement>
+					<font fontName="Baskerville Old Face" size="18" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Tony´s Kinal]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="572" height="52" forecolor="#000000" uuid="9732c3c2-6bd4-4859-addb-d638b8f09dde"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE EMPRESAS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="150" y="38" width="277" height="1" forecolor="#FF0033" uuid="8d061ad6-72c6-4a28-b5c3-99fabc529521"/>
+			</line>
+			<line>
+				<reportElement x="150" y="43" width="277" height="1" forecolor="#FF0033" uuid="5620993e-e90e-4fda-b8da-cd912bd7e4f1"/>
+			</line>
+			<line>
+				<reportElement x="-1" y="0" width="1" height="52" uuid="4dca32e6-23e6-47f9-a9a4-bbc8d4c7551b"/>
+			</line>
+			<line>
+				<reportElement x="571" y="5" width="1" height="47" uuid="85c2337b-ab37-4e2c-bd40-2ee083ffb0aa"/>
+			</line>
+			<line>
+				<reportElement x="0" y="51" width="572" height="1" uuid="fd1569b4-c8a2-4ee3-938e-4d480ace3ee2"/>
+				<graphicElement>
+					<pen lineStyle="Dashed" lineColor="#66FF33"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="528" y="18" width="29" height="20" uuid="357ae815-3712-4736-9f5a-efd36cad21d3"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="488" y="18" width="28" height="20" uuid="a5b08628-ccea-46d7-b6df-005ca08129f7"/>
+				<text><![CDATA[Pág]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="12" width="100" height="20" uuid="04a0c077-fabd-41a1-ba2f-6c94fdb8d8b8"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CodigoEmpresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="12" width="139" height="20" uuid="df3fac77-5f34-47ff-a33a-a79eeb8f34aa"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NombreEmpresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="12" width="59" height="20" uuid="f3fe8a56-2225-4e25-a898-6ac8f34d3e24"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Direccón]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="457" y="12" width="100" height="20" uuid="296d7a19-f83b-461f-b331-8e61e6be3fca"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="31" width="572" height="1" uuid="d4000848-6e97-4ca6-9bc6-20c9b896f1f7"/>
+				<graphicElement>
+					<pen lineStyle="Dashed" lineColor="#66FF33"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="128" y="0" width="1" height="30" uuid="b4a2cf6d-22f4-4a2d-9d00-93144f6a215f"/>
+				<graphicElement>
+					<pen lineColor="#009966"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="277" y="0" width="1" height="30" uuid="b7de4c5f-9436-4a31-8f17-fd14cc366ceb"/>
+				<graphicElement>
+					<pen lineColor="#009966"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="426" y="1" width="1" height="30" uuid="210bb894-edef-43f6-a29b-3aa9aaa25cae"/>
+				<graphicElement>
+					<pen lineColor="#009966"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-1" y="1" width="1" height="30" uuid="8615f8af-74a5-4477-8c64-7cc24f0c6b00"/>
+			</line>
+			<line>
+				<reportElement x="571" y="1" width="1" height="29" uuid="83c3faa4-aa7c-4a30-93b3-d25a1e9ed5b1"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="10" width="100" height="20" uuid="5888ae59-1f16-4676-b94b-dedce13feb66"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{codigoEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="10" width="100" height="20" uuid="ce824a6b-1c29-4db9-954f-50ca0525801a"/>
+				<textElement textAlignment="Left" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="327" y="10" width="100" height="20" uuid="0af85648-2aeb-4815-b578-875f4bb1398a"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="457" y="10" width="100" height="20" uuid="42a79547-0aff-484f-9f0b-75a207464f0b"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="39" width="572" height="1" uuid="20a2a7fc-f770-4588-b0c2-a14efe81b416"/>
+				<graphicElement>
+					<pen lineStyle="Dashed" lineColor="#66FF66"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="277" y="1" width="1" height="39" uuid="2d7b5d90-0a1b-4100-8b7e-f2861b4f672c"/>
+				<graphicElement>
+					<pen lineColor="#009966"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="426" y="1" width="1" height="39" uuid="97b08e75-0d82-44a2-9d1d-9d46c6a5302d"/>
+				<graphicElement>
+					<pen lineColor="#009966"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="128" y="1" width="1" height="39" uuid="2e67e68b-f7b5-4535-8497-60699135ebd4"/>
+				<graphicElement>
+					<pen lineColor="#009966"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-1" y="0" width="1" height="39" uuid="b6bcd360-92c1-49e3-8a66-96925042c1b9"/>
+			</line>
+			<line>
+				<reportElement x="571" y="-1" width="1" height="40" uuid="f1610cf3-086a-4497-928b-f1d6bac8e9d7"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="46" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="0" y="0" width="572" height="46" forecolor="#00FF00" uuid="fa550584-0ad3-4bdc-b005-89257b36a5ed"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="572" height="46" uuid="c79a9d1d-b9ac-41ec-950d-028c29e2033f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Baskerville Old Face" size="14"/>
+				</textElement>
+				<text><![CDATA[No puedes comprar la felicidad, pero si puedes comprar Tonýs que es casí lo mismo]]></text>
+			</staticText>
+			<line>
+				<reportElement x="571" y="0" width="1" height="46" uuid="692a3bff-339a-4272-bae0-9bf838d1c65e"/>
+			</line>
+			<line>
+				<reportElement x="-2" y="0" width="1" height="46" uuid="245bf05c-8715-43c1-9309-1d9a188c07d7"/>
+			</line>
+		</band>
+	</columnFooter>
+</jasperReport>
